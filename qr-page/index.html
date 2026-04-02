@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BollaNetwork — Expo Dev</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a0a;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+    }
+    .logo { font-size: 48px; margin-bottom: 16px; }
+    h1 { font-size: 24px; color: #fff; margin-bottom: 8px; }
+    .subtitle { color: #888; font-size: 14px; margin-bottom: 32px; }
+    .qr-container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+    .qr-container svg {
+      display: block;
+      width: 260px;
+      height: 260px;
+    }
+    .url-box {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: monospace;
+      font-size: 12px;
+      color: #4fc3f7;
+      word-break: break-all;
+      margin-bottom: 24px;
+    }
+    .instructions {
+      text-align: left;
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.8;
+    }
+    .instructions strong { color: #fff; }
+    .step { margin-bottom: 8px; }
+    .open-btn {
+      display: block;
+      background: #4fc3f7;
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 14px 24px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      transition: background 0.2s;
+    }
+    .open-btn:active { background: #039be5; }
+    .badge {
+      display: inline-block;
+      background: #1b5e20;
+      color: #4caf50;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">⚡</div>
+    <h1>BollaNetwork Dev</h1>
+    <p class="subtitle">Expo Go — Scan to preview</p>
+
+    <div class="qr-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 29 29" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h29v29H0z"/><path stroke="#000000" d="M0 0.5h7m1 0h2m1 0h2m3 0h1m2 0h2m1 0h7M0 1.5h1m5 0h1m1 0h3m11 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m3 0h1m2 0h4m1 0h3m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m2 0h8m1 0h1m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m3 0h1m1 0h1m1 0h3m2 0h1m2 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m2 0h1m2 0h1m5 0h3m1 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h1m3 0h1m4 0h3M0 8.5h1m1 0h2m1 0h3m4 0h1m1 0h4m4 0h1m2 0h1m1 0h2M5 9.5h1m6 0h1m1 0h1m1 0h2m1 0h6m1 0h1m1 0h1M1 10.5h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m4 0h1m4 0h3M9 11.5h1m2 0h2m5 0h4m1 0h2m2 0h1M0 12.5h1m3 0h3m2 0h1m1 0h1m3 0h1m1 0h3m1 0h1m1 0h1m2 0h2M0 13.5h1m2 0h2m2 0h3m3 0h7m2 0h1m2 0h1m1 0h2M0 14.5h1m2 0h1m2 0h2m2 0h1m1 0h1m1 0h1m1 0h1m2 0h3m1 0h1m2 0h3M2 15.5h1m1 0h1m2 0h3m1 0h1m1 0h1m2 0h1m1 0h1m5 0h1m2 0h1M0 16.5h1m5 0h3m2 0h1m3 0h1m3 0h1m1 0h1m2 0h1m3 0h1M8 17.5h2m2 0h2m1 0h4m1 0h1m2 0h1m2 0h2M0 18.5h1m2 0h4m1 0h1m1 0h1m1 0h1m2 0h1m2 0h1m2 0h1m1 0h1m1 0h2M4 19.5h1m3 0h2m7 0h1m1 0h1m1 0h1m1 0h5M1 20.5h3m2 0h1m1 0h1m2 0h1m1 0h1m3 0h1m2 0h5m1 0h3M8 21.5h3m2 0h2m1 0h1m3 0h1m3 0h1m2 0h2M0 22.5h7m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m1 0h1m1 0h1m1 0h2M0 23.5h1m5 0h1m1 0h1m1 0h3m3 0h1m1 0h1m1 0h1m3 0h1m2 0h1M0 24.5h1m1 0h3m1 0h1m3 0h2m2 0h1m1 0h3m1 0h7M0 25.5h1m1 0h3m1 0h1m1 0h3m2 0h4m2 0h1m1 0h1m1 0h2m3 0h1M0 26.5h1m1 0h3m1 0h1m1 0h2m2 0h2m3 0h2m1 0h1m2 0h1m4 0h1M0 27.5h1m5 0h1m5 0h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1M0 28.5h7m1 0h1m2 0h2m5 0h3m1 0h4m1 0h1"/></svg>
+    </div>
+
+    <div class="url-box">exp://pyxkqzi-anonymous-8081.exp.direct</div>
+
+    <div class="instructions">
+      <div class="step"><strong>1.</strong> Instala o <strong>Expo Go</strong> no iPhone (App Store)</div>
+      <div class="step"><strong>2.</strong> Abre a câmera e escaneia o QR code acima</div>
+      <div class="step"><strong>3.</strong> O app abre automaticamente no Expo Go</div>
+    </div>
+
+    <a href="exp://pyxkqzi-anonymous-8081.exp.direct" class="open-btn">📱 Abrir no Expo Go</a>
+
+    <div class="badge">🟢 Tunnel ativo — SDK 54</div>
+  </div>
+
+  <script>
+    // Show button only on mobile
+    var btn = document.querySelector('.open-btn');
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) btn.style.display = 'none';
+  </script>
+</body>
+</html>
